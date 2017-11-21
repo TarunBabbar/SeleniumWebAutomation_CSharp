@@ -1,19 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Samples.Tests.SeleniumWebDriver;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using RubyOnRailsUsingSeleniumWebDriver.SeleniumWebDriver;
 
 namespace RubyOnRailsUsingSeleniumWebDriver.Initialization
 {
     [TestClass]
     public class AssemblySetUp
     {
-        public static WebDriver SeleniumDriver = new WebDriver();
         public static string DeploymentDirectory;
-        public static TestContext TestContext;
+        protected static TestContext TestContext;
+        protected static WebDriver SeleniumDriver = new WebDriver();
 
         [AssemblyInitialize]
         public static void Setup(TestContext testContext)
@@ -32,7 +27,6 @@ namespace RubyOnRailsUsingSeleniumWebDriver.Initialization
         public void TestCleanup()
         {
             SeleniumDriver.QuitAndCloseWebDriver();
-            SeleniumDriver.Driver = null;
         }
     }
 }

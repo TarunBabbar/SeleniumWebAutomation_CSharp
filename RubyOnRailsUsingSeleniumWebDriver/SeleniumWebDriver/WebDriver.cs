@@ -8,7 +8,7 @@ using OpenQA.Selenium.IE;
 using OpenQA.Selenium.Support.UI;
 using RubyOnRailsUsingSeleniumWebDriver.Initialization;
 
-namespace Samples.Tests.SeleniumWebDriver
+namespace RubyOnRailsUsingSeleniumWebDriver.SeleniumWebDriver
 {
     public class WebDriver
     {
@@ -124,6 +124,7 @@ namespace Samples.Tests.SeleniumWebDriver
         {
             webDriver.Close();
             webDriver.Quit();
+            Driver = null;
         }
 
         public void Navigate(string url)

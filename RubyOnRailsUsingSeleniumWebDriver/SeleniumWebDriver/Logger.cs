@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using OpenQA.Selenium;
+﻿using System.Diagnostics;
 
-namespace Samples.Tests.SeleniumWebDriver
+namespace RubyOnRailsUsingSeleniumWebDriver.SeleniumWebDriver
 {
     public class Logger
     {
