@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using OpenQA.Selenium;
@@ -52,9 +53,8 @@ namespace RubyOnRailsUsingSeleniumWebDriver.SeleniumWebDriver
                     if (webDriver == null)
                     {
                         ChromeOptions options = new ChromeOptions();
-                        options.AddArguments("no-sandbox");
-                        options.AddArgument("test-type");
-                        options.AddArgument("--disable-extensions");
+                        options.AddArguments(new List<string>()
+                        { "no-sandbox", "test-type", "--disable-extensions", "disable-infobars" });
                         webDriver = new ChromeDriver(AssemblySetUp.DeploymentDirectory, options);
                     }
                     break;
